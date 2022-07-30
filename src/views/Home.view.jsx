@@ -1,8 +1,11 @@
-import React from "react";
+import React from "react"
+import App from "../components/App/App"
 
 function HomeView() {
 
-    return <div>Home View</div>
+    return <div>
+        <App />
+    </div>
 }
 
 export default HomeView
