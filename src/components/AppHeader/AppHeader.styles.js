@@ -4,7 +4,7 @@ export const Wrapper = styled.header`
     height: 70px;
 
     background-color: seashell;
-    color: slategray;
+    color: #70152B;
 
     font-size: 24px;
     font-weight: 600;
@@ -15,7 +15,7 @@ export const Wrapper = styled.header`
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-left: 20px;
 
     span {
         font-weight: 600;
