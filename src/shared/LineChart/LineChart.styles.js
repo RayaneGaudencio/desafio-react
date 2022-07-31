@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 15px 0;
+    margin-bottom: 15px;
 
     span {
         font-size: 12px;
