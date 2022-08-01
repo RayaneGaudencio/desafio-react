@@ -5,6 +5,7 @@ export const Wrapper = styled.main`
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     padding: 24px;
+    height: calc(100% - 70px);
 
     font-size: 20px;
 

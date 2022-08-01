@@ -5,9 +5,9 @@ export default function AppContainer({ left, middle, right }) {
 
     return (
         <Wrapper>
-            <section>{ left }</section>
-            <section>{ middle }</section>
-            <section>{ right }</section>
+            { left }
+            { middle }
+            { right }
         </Wrapper>
     )
 }
