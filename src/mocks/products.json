@@ -58,7 +58,7 @@
             "price": 11.99,
             "tags": [
                 "food",
-                "healthy"
+                "others"
             ]
         },
         {
@@ -69,7 +69,7 @@
             "price": 4.99,
             "tags": [
                 "condiment",
-                "healthy"
+                "others"
             ]
         },
         {
@@ -100,8 +100,8 @@
             "checked": false,
             "price": 4.99,
             "tags": [
-                "healthy",
-                "grain"
+                "others",
+                "others"
             ]
         },
         {
@@ -112,7 +112,7 @@
             "price": 20,
             "tags": [
                 "food",
-                "healthy",
+                "others",
                 "meat"
             ]
         },
@@ -153,7 +153,7 @@
             "checked": false,
             "price": 1.99,
             "tags": [
-                "health"
+                "others"
             ]
         },
         {
@@ -203,7 +203,7 @@
             "checked": false,
             "price": 10.99,
             "tags": [
-                "health"
+                "others"
             ]
         },
         {
@@ -233,7 +233,7 @@
             "checked": false,
             "price": 1.99,
             "tags": [
-                "grain"
+                "others"
             ]
         },
         {
@@ -244,8 +244,8 @@
             "price": 9.99,
             "tags": [
                 "food",
-                "grain",
-                "healthy"
+                "others",
+                "others"
             ]
         },
         {
@@ -295,7 +295,7 @@
             "checked": false,
             "price": 1.99,
             "tags": [
-                "health"
+                "others"
             ]
         },
         {
@@ -336,7 +336,7 @@
             "checked": false,
             "price": 2.99,
             "tags": [
-                "healthy",
+                "others",
                 "liquid"
             ]
         },
@@ -400,7 +400,7 @@
             "tags": [
                 "condiment",
                 "food",
-                "healthy"
+                "others"
             ]
         },
         {
@@ -411,7 +411,7 @@
             "price": 6.99,
             "tags": [
                 "food",
-                "healthy"
+                "others"
             ]
         },
         {
@@ -534,7 +534,7 @@
             "price": 18.99,
             "tags": [
                 "condiment",
-                "healthy"
+                "others"
             ]
         },
         {

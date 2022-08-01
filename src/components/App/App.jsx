@@ -5,6 +5,7 @@ import AppContainer from "../AppContainer/AppContainer.jsx";
 import LineChart from "../../shared/LineChart/LineChart.jsx";
 import ShoppingList from "../ShoppingList/ShoppingList.jsx";
 import productsMock from '../../mocks/products.json'
+import extractPercentage from "../../extractPercentage.js";
 
 export default function App() {
 
@@ -47,23 +48,44 @@ export default function App() {
 
                     <LineChart
                         color={colors[0]}
-                        title='Alimentos'
-                        percentage={80}
+                        title='Saudáveis'
+                        percentage={extractPercentage(selectedProducts.length, selectedProducts
+                            .filter(product => product.tags.includes('healthy'))
+                            .length
+                        )}
                     />
                     <LineChart
                         color={colors[1]}
-                        title='Produtos de limpeza'
-                        percentage={30}
+                        title='Não tão saudáveis'
+                        percentage={extractPercentage(selectedProducts.length, selectedProducts
+                            .filter(product => product.tags.includes('junk'))
+                            .length
+
+                        )}
                     />
                     <LineChart
                         color={colors[2]}
-                        title='Frutas/Vegetais'
-                        percentage={10}
+                        title='Limpeza'
+                        percentage={extractPercentage(selectedProducts.length, selectedProducts
+                            .filter(product => product.tags.includes('cleaning'))
+                            .length
+                        )}
+                    />
+                    <LineChart
+                        color={colors[3]}
+                        title='Produtos de higiene'
+                        percentage={extractPercentage(selectedProducts.length, selectedProducts
+                            .filter(product => product.tags.includes('hygiene'))
+                            .length
+                        )}
                     />
                     <LineChart
                         color={colors[3]}
                         title='Outros'
-                        percentage={30}
+                        percentage={extractPercentage(selectedProducts.length, selectedProducts
+                            .filter(product => product.tags.includes('others'))
+                            .length
+                        )}
                     />
                 </div>}
                 />
