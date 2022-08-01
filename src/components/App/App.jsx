@@ -13,12 +13,21 @@ export default function App() {
 
     const [ products, setProducts ] = useState(productsMock.products)
     const [ selectedProducts, setSelectedProducts ] = useState([])
+    const [ totalPrice, setTotalPrice ] = useState(0)
 
     useEffect(() => {
         const newSelectedProducts = products
         .filter(product => product.checked)
         setSelectedProducts(newSelectedProducts)
     }, [products])
+
+    useEffect(() => {
+        const total = selectedProducts
+        .map(product => product.price)
+        .reduce((a, b) => a + b, 0)
+
+        setTotalPrice(total)
+    }, [selectedProducts])
 
     function handleToggle( id ) {
         const newProducts = products.map(product =>
@@ -48,7 +57,7 @@ export default function App() {
 
                     <LineChart
                         color={colors[0]}
-                        title='Saudáveis'
+                        title='Saudável'
                         percentage={extractPercentage(selectedProducts.length, selectedProducts
                             .filter(product => product.tags.includes('healthy'))
                             .length
@@ -56,11 +65,10 @@ export default function App() {
                     />
                     <LineChart
                         color={colors[1]}
-                        title='Não tão saudáveis'
+                        title='Não tão saudável'
                         percentage={extractPercentage(selectedProducts.length, selectedProducts
                             .filter(product => product.tags.includes('junk'))
                             .length
-
                         )}
                     />
                     <LineChart
@@ -87,6 +95,18 @@ export default function App() {
                             .length
                         )}
                     />
+                    <div style={{ marginTop: 12}}>
+                        <h2 style={{ fontWeight: 600, fontSize: 14, color: '#c23b3b'}}>
+                            Previsão de gastos
+                        </h2>
+                        <div style={{ fontSize: 25, color: '#70152B', fontWeight: 700 }}>
+                            {totalPrice.toLocaleString('pt-br', {
+                                minimumFractionDigits: 2,
+                                style: 'currency',
+                                currency: 'BRL'
+                            }) }
+                        </div>
+                    </div>
                 </div>}
                 />
         </Container>
